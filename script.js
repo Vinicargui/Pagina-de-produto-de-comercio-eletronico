@@ -1,7 +1,9 @@
 const menu = document.querySelector(".mobile-menu-icon"); 
 
-menu.addEventListener("click",menuMobile());
-console.log(menuMobile);
+// menu.addEventListener("click",menuMobile());
+// console.log(menuMobile);
+
+menu.onclick = menuMobile;
 
 function menuMobile(){
     let mobile = document.querySelector(".mobile-menu");
