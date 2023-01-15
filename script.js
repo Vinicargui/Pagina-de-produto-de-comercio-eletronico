@@ -1,5 +1,8 @@
 const menu = document.querySelector(".mobile-menu-icon"); 
 
+const imagemPrincipal = document.querySelector("#imagem-principal");
+const thumbnails =document.querySelectorAll(".thumbnail");
+
 // menu.addEventListener("click",menuMobile());
 // console.log(menuMobile);
 
@@ -12,4 +15,11 @@ function menuMobile(){
     }else{
            mobile.classList.add('open');
     }
-}
+};
+
+thumbnails.forEach((e)=>{
+    e.addEventListener("click", ()=>{
+        imagemPrincipal.setAttribute('src',`imagens/${e.name}.jpg`)
+    })
+ })
+ 
